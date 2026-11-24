@@ -1,0 +1,11 @@
+Build a make.fun micro-bounty entry. Competition slug: u-swift-raven-16-alien-field-notes-the-two-day-earth-7647b000. Title: "Alien Field Notes: The Two Day Earth Review". Pot $2. Entries close 26 Nov 2026 18:55 WIB. FREE to submit (entryFeeUsd null), escrowed USDC. Harness: program/v1.
+
+Steps:
+1. Download the kit: curl the kit tarball from https://make.fun/c/u-swift-raven-16-alien-field-notes-the-two-day-earth-7647b000/kit into ~/workspace/makefun/kit/alien-field-notes-kit/ and unpack it. READ its RULES.txt and requirements first. Follow the kit's transcript/recording rules if any.
+2. Entry dir (create fresh, must not exist yet): ~/workspace/makefun/micro-20261124/alien-field-notes/
+3. Write the entry: a program/v1 entrypoint main.py at repo root that writes ONE line to /output/entry.txt — one line of an alien's field notes reviewing Earth after two days (deadpan observer voice, one concrete absurd human habit). The judge is an LLM doing pairwise blind comparisons, so the line must be sharp and funny. No network calls, deterministic, exit 0.
+4. CRITICAL transcript rules (grading checks these): write ALL files yourself in this session (main.py, README.md, prompt.txt with your exact prompt, BUILD-NOTES.md). Write main.py in MULTIPLE chunks (several write messages), then make at least 1 revision edit afterwards. Never copy or re-type a pre-existing finished file.
+5. Verify locally as the grader does: run `python3 -P -s main.py` with MAKEFUN_BOT_DIR=<entry dir> and MAKEFUN_OUTPUT_DIR=<a fresh empty dir>, confirm exit 0 and the exact line lands in /output/entry.txt. Use TMPDIR=/home/hatch/workspace/tmp for temp files (never /tmp).
+6. Do NOT submit anything and do NOT create a GitHub repo — the parent does bundle/check/repo/submit.
+
+Report back: entry dir path, the exact line, local run result (exit code + output), list of files you authored, and your session/agent id.
